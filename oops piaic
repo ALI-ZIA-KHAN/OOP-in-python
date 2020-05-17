@@ -1,0 +1,37 @@
+##oops
+class Car():
+    ##initializer(self,attributes.....)
+    def __init__(self,make,model,year):
+      self.make=make
+      self.model=model
+      self.year=year
+      ##default attribute
+      self.battery="200amp"
+    ##behaviours
+    def description(self):
+        print(f"the make of car is {self.make}")
+    def modeling(self):
+        print(f"the make of car is {self.model}")
+    def coloring(self):
+        print(f"the make of car is {self.year}")
+    ##for changing defa. attr. value via function
+    def setbatterysize(self,newsize):
+        self.battery=newsize
+    def getbatterysize(self):
+        print(f"the new battery is {self.battery}")
+##creating objects
+car1=Car("honda","civic","2017")
+car2=Car("suzuki","cultus","2015")
+##accessing through attribute
+print(car1.model)
+print(car2.year)
+##accessing through functions
+car1.modeling()
+
+##hitting attr. value direct by attributes(not recommended)
+car2.battery="400amp"
+print(car2.battery)
+##hitting attr. value via functions(better)
+car1.setbatterysize("500amp")
+car1.getbatterysize()
+
